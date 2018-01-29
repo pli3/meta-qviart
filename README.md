@@ -1,3 +1,3 @@
-# meta-xsarius
+# meta-qviart
 ___
-BSP layer for xsarius
+BSP layer for qviart. 
