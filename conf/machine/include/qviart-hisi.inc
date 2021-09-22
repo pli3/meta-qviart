@@ -1,3 +1,6 @@
+# We know about rtc
+MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
+
 KERNEL_FILE = "kernel.bin"
 ROOTFS_FILE = "rootfs.tar.bz2"
 MTD_BLACK  = "mmcblk0"
