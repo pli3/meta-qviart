@@ -64,13 +64,14 @@ IMAGE_CMD_qviartemmc_append = "\
     cp ${DEPLOY_DIR_IMAGE}/uImage ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${KERNEL_FILE}; \
     mv ${IMGDEPLOYDIR}/${IMAGE_NAME}_subrootfs.ext4 ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.ext4; \
     cd ${DEPLOY_DIR_IMAGE}; \
-    zip ${IMAGE_NAME}_mmc.zip ${IMAGEDIR}/*; \
+		zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_usb.zip ${IMAGEDIR}/*; \
     cd ${IMAGE_ROOTFS}; \
     tar -cvf ${DEPLOY_DIR_IMAGE}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
     mv ${DEPLOY_DIR_IMAGE}/rootfs.tar ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar; \
     cd ${DEPLOY_DIR_IMAGE}; \
     bzip2 ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar; \
-    zip -j ${IMAGE_NAME}_multiboot_mmc.zip ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/kernel.bin ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar.bz2; \
+    echo ${IMAGEVERSION} > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion; \
+    zip -j ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_multiboot_ofgwrite.zip ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/kernel.bin ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar.bz2; \
     rm -f ${DEPLOY_DIR_IMAGE}/*.manifest; \
     rm -Rf ${DEPLOY_DIR_IMAGE}/rootfs; \
     rm -f ${DEPLOY_DIR_IMAGE}/.ext4; \
