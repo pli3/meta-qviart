@@ -23,6 +23,7 @@ do_install() {
     install -d ${D}${libdir}
     install -m 0755 ${S}/lib/libmali.so ${D}${libdir}/libMali.so
     ln -s libMali.so ${D}${libdir}/libGLESv2.so.2.0
+    ln -s libMali.so ${D}${libdir}/libmali.so
     ln -s libGLESv2.so.2.0 ${D}${libdir}/libGLESv2.so.2
     ln -s libGLESv2.so.2 ${D}${libdir}/libGLESv2.so
     ln -s libMali.so ${D}${libdir}/libGLESv1_CM.so.1.1
