@@ -39,6 +39,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-qviart"
 PREFERRED_PROVIDER_virtual/egl = "qviart-opengl-${SOC_FAMILY}"
 PREFERRED_PROVIDER_virtual/libgles1 = "qviart-opengl-${SOC_FAMILY}"
 PREFERRED_PROVIDER_virtual/libgles2 = "qviart-opengl-${SOC_FAMILY}"
+PREFERRED_RPROVIDER_aio-grab = "qviart-grab-${SOC_FAMILY}"
 
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "qviart-blindscan-utils-${SOC_FAMILY}"
 
@@ -82,7 +83,6 @@ IMAGE_CMD_qviartemmc_append = "\
     "
 
 BBMASK += "meta-openpli/recipes-support/partitions-by-name"
-#BBMASK += "meta-openpli/recipes-core/busybox"
 BBMASK += "meta-vuplus/recipes-graphics/"
 BBMASK += "meta-fulan/recipes-graphics/"
 BBMASK += "meta-vuplus/recipes-webkit/"
