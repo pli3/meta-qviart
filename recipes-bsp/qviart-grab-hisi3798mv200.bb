@@ -1,4 +1,4 @@
-SUMMARY = "grab for dags Model ${MACHINEBUILD}"
+SUMMARY = "grab for dags Model ${MACHINE_ARCH}"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
