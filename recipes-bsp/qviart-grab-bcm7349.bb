@@ -4,7 +4,7 @@ PRIORITY = "optional"
 LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "^(lunix4k|lunix3-4)$"
+COMPATIBLE_MACHINE = "^(lunix4k|lunix3-4k)$"
 
 SRCDATE = "20211104"
 
