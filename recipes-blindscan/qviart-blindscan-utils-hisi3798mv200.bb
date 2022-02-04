@@ -9,5 +9,5 @@ FILES_qviart-blindscan-utils-${SOC_FAMILY} = " \
 	${bindir}/qviart_blindscan \
 "
 
-SRC_URI[md5sum] = "89b5f9fdef0e832221594604ecd4e7f9"
-SRC_URI[sha256sum] = "bc5557c3106e8bec5aa49f08970d276a904071bd5eeb327d174ac565962b8c46"
+SRC_URI[md5sum] = "2c5c102ee2428b7a479bbc8d248e3cc4"
+SRC_URI[sha256sum] = "7d807a2ed397e110f3d8ed58bd94644be977c3609d4e4ce277e295be08fc67b2"
