@@ -18,7 +18,6 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 "
 
 EXTRA_IMAGEDEPENDS += "\
-	webkit-classic \
 	dumpait-legacy \
 	enigma2-plugin-extensions-hbbtv-webkit \
         splash-bootlogo \
