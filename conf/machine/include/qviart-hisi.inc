@@ -8,6 +8,8 @@ MTD_BLACK  = "mmcblk0"
 MTD_KERNEL = "mmcblk0p27"
 MTD_ROOTFS = "mmcblk0p30"
 
+APPLOADER_FILE = "apploader.bin"
+
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
 	qviart-reader-${SOC_FAMILY} \
 	qviart-libreader-${SOC_FAMILY} \
@@ -23,6 +25,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
 	${@bb.utils.contains('MACHINE_FEATURES', 'fastboot', 'android-tools', '', d)} \
 	${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'partitions-by-name', '', d)} \
 	qviart-blindscan-utils-${SOC_FAMILY} \
+    qviart-partitions-${MACHINE} \
 	qviart-buildimage \
 "
 
@@ -63,6 +66,7 @@ IMAGE_CMD_qviartemmc_append = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mkdir -p ${DEPLOY_DIR_IMAGE}/release/${IMAGEDIR}; \
     cp ${DEPLOY_DIR_IMAGE}/uImage ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${KERNEL_FILE}; \
+    cp ${DEPLOY_DIR_IMAGE}/${APPLOADER_FILE} ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${APPLOADER_FILE}; \
     mv ${IMGDEPLOYDIR}/${IMAGE_NAME}_subrootfs.ext4 ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.ext4; \
     cd ${DEPLOY_DIR_IMAGE}; \
 		zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_usb.zip ${IMAGEDIR}/*; \
