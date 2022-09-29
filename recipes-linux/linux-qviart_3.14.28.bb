@@ -4,7 +4,7 @@ SECTION = "kernel"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 KV = "3.14.28.1"
-PR_INC = ".2"
+PR_INC = ".3"
 
 SRC_URI[md5sum] = "d83e48d38bf83c50f7a175bc6a1fd2ce"
 SRC_URI[sha256sum] = "9c04354eba2861304d09bce015b4d381c65f968ba445465a70a77bee3ee16f45"
@@ -23,8 +23,10 @@ SRC_URI = "http://en3homeftp.net/pub/src/linux-${KV}.tar.xz \
         file://kernel-gcc7.patch \
 	file://kernel-gcc8.patch \
 	file://kernel-gcc9.patch \
+	file://kernel-gcc10.patch \
 	file://0003-mips-kernel-ilog2-gcc7.patch \
 	file://0003-3.x-uaccess-dont-mark-register-as-const.patch \
+	file://make-yyloc-declaration-extern.patch \
         file://defconfig \
         "
 

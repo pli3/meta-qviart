@@ -65,7 +65,7 @@ IMAGE_CMD_qviartemmc_append = "\
     cp ${DEPLOY_DIR_IMAGE}/uImage ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${KERNEL_FILE}; \
     mv ${IMGDEPLOYDIR}/${IMAGE_NAME}_subrootfs.ext4 ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.ext4; \
     cd ${DEPLOY_DIR_IMAGE}; \
-		zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_usb.zip ${IMAGEDIR}/*; \
+    zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_usb.zip ${IMAGEDIR}/*; \
     cd ${IMAGE_ROOTFS}; \
     tar -cvf ${DEPLOY_DIR_IMAGE}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
     mv ${DEPLOY_DIR_IMAGE}/rootfs.tar ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar; \
@@ -84,8 +84,6 @@ IMAGE_CMD_qviartemmc_append = "\
 
 BBMASK += "meta-openpli/recipes-support/partitions-by-name"
 BBMASK += "meta-vuplus/recipes-graphics/"
-BBMASK += "meta-fulan/recipes-graphics/"
 BBMASK += "meta-vuplus/recipes-webkit/"
-BBMASK += "meta-oe/recipes-qt5.14/"
 BBMASK += "meta-openpli/recipes-webkit/"
 
