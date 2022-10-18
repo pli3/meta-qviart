@@ -21,9 +21,9 @@ IMAGE_CMD_qviartemmc () {
 	mkdir -p ${IMGDEPLOYDIR}/rootfs/linuxrootfs2
 	mkdir -p ${IMGDEPLOYDIR}/rootfs/linuxrootfs3
 	mkdir -p ${IMGDEPLOYDIR}/rootfs/linuxrootfs4
-  mkdir -p ${IMGDEPLOYDIR}/rootfs/lost+found
-  rm -rf ${IMAGE_ROOTFS}/tmp/uImage*
-	cp -a ${IMAGE_ROOTFS}/* ${IMGDEPLOYDIR}/rootfs/linuxrootfs1/
+  	mkdir -p ${IMGDEPLOYDIR}/rootfs/lost+found
+  	rm -rf ${IMAGE_ROOTFS}/tmp/uImage*
+	cp -fR ${IMAGE_ROOTFS}/* ${IMGDEPLOYDIR}/rootfs/linuxrootfs1/
 
 	eval local COUNT=\"0\"
 	eval local MIN_COUNT=\"60\"
